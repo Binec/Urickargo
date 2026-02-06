@@ -1,3 +1,51 @@
+
+
+<!DOCTYPE html> <html lang="es"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>URICKARGO - Transporte y Mudanzas de Confianza</title> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="precon
+
+pasted
+
+el logo que esta en el hero section hazlo responsive
+EL formulario en mobiles se ve pequeño del ancho, ajustalo al tamño de la pantalla
+17:01
+Voy a ayudarte a hacer esos ajustes en el código HTML. Haré el logo del hero section responsive y ajustaré el formulario para que se vea mejor en móviles.
+
+
+Editó un archivo, ejecutó un comando, archivo visualizado
+Voy a crear el archivo HTML con las correcciones que necesitas:
+
+
+Creó un archivo, archivo leído
+¡Listo! He realizado los dos ajustes que solicitaste:
+
+✅ Cambios realizados:
+1. Logo del Hero Section Responsive:
+
+Agregué estilos para que el logo se adapte automáticamente al tamaño de la pantalla
+En móviles (768px o menos), el logo usa el 80% del ancho disponible
+En pantallas muy pequeñas (480px o menos), el logo usa el 90% del ancho
+El logo mantiene sus proporciones originales y se centra automáticamente
+2. Formulario de Contacto Ajustado para Móviles:
+
+En pantallas de 768px o menos, el formulario ahora ocupa todo el ancho disponible
+Reduje el padding interno del formulario en móviles (de 4rem a 2rem 1.5rem)
+Ajusté el padding de la sección de contacto completa (de 8rem 3rem a 4rem 1.5rem)
+En pantallas muy pequeñas (480px), el padding es aún más compacto (1.5rem 1rem)
+Los campos del formulario también se ajustaron para mejor visualización en móviles
+El archivo está listo para descargar y usar. Ambos elementos ahora se verán correctamente en todos los dispositivos móviles.
+
+Urickargo fixed
+Código · HTML 
+
+
+Has usado 90% de tu límite de sesión
+Actualizar
+
+
+
+Claude es IA y puede cometer errores. Por favor, verifica nuevamente las respuestas.
+Urickargo fixed · HTML
+Copiar
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -165,6 +213,13 @@
             max-width: 600px;
             z-index: 2;
             color: var(--white);
+        }
+
+        .hero-content img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
+            display: block;
         }
 
         .hero-subtitle {
@@ -885,6 +940,16 @@
                 transform: rotate(-45deg) translate(7px, -7px);
             }
 
+            .hero-left {
+                padding: 4rem 2rem;
+            }
+
+            .hero-content img {
+                max-width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
             .hero-title {
                 font-size: 3.5rem;
             }
@@ -907,6 +972,16 @@
                 grid-template-columns: 1fr;
             }
 
+            .contact-form {
+                padding: 2rem 1.5rem;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .contact-section {
+                padding: 4rem 1.5rem;
+            }
+
             .cta-content h2 {
                 font-size: 2.5rem;
             }
@@ -927,6 +1002,35 @@
             .btn-secondary {
                 width: 100%;
                 text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content img {
+                max-width: 90%;
+            }
+
+            .hero-title {
+                font-size: 2.8rem;
+            }
+
+            .hero-description {
+                font-size: 1.1rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .contact-form {
+                padding: 1.5rem 1rem;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 0.9rem 1rem;
+                font-size: 0.95rem;
             }
         }
     </style>
